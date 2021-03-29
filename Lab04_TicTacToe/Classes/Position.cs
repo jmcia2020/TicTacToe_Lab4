@@ -15,5 +15,18 @@
             Row = row;
             Column = column;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Position p)
+                return p.Row == Row && p.Column == Column;
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return Row.GetHashCode() ^ Column.GetHashCode();
+        }
     }
 }

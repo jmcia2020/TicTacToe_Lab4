@@ -47,7 +47,11 @@ namespace TicTacToeTest.cs
             Position result = Player.PositionForNumber(position);
 
             // Arrange
-            // Assert.Equal(new Position(0, 0), result);
+
+            // only works if Position.Equals() is overridden
+            Assert.Equal(new Position(expectedRow, expectedColumn), result);
+
+            // if Equals() is not overridden, check individual properties
             Assert.Equal(expectedRow, result.Row);
             Assert.Equal(expectedColumn, result.Column);
         }
