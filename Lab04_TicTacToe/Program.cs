@@ -27,16 +27,27 @@ namespace Lab04_TicTacToe
             Player p2 = new Player();
             p2.Name = Console.ReadLine();
 
+            Console.WriteLine($"Greetings {player1.Name} and {player2.Name}. " +
+                $"Would you like to play a game?");
+
             Game game = new Game(p1, p2);
             Player winner = game.Play();
 
             if (winner is null)
+            {
                 Console.WriteLine($"It's a tie!");
+                //Console.WriteLine($"Would you like to play again?");
+                //Console.WriteLine($"Choose Y or N:");
+                //Console.ReadLine(); //if y, StartGame() else close app
+            }
             else
-                Console.WriteLine($"Woo Hoo! {winner.Name} won the game!");
-                Console.WriteLine($"Would you like to play again?");
-                Console.WriteLine($"Choose Y or N:");
-                Console.ReadLine(); //if y, StartGame() else close app
+            {
+                Console.WriteLine($"{winner.Name} won the game! " +
+                    $"Isn't this better than global thermonuclear warfare?");
+                //Console.WriteLine($"Would you like to play again?");
+                //Console.WriteLine($"Choose Y or N:");
+                //Console.ReadLine(); //if y, StartGame() else close app
+            }
         }
     }
 }
