@@ -1,11 +1,11 @@
-﻿using Lab04_TicTacToe.Classes;
-using System;
+﻿using System;
+using Lab04_TicTacToe.Classes;
 
 namespace Lab04_TicTacToe
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
@@ -22,12 +22,14 @@ namespace Lab04_TicTacToe
             Console.WriteLine("Player 1:");
             Player p1 = new Player();
             p1.Name = Console.ReadLine();
+            p1.Marker = "X";
 
             Console.WriteLine("Player 2:");
             Player p2 = new Player();
             p2.Name = Console.ReadLine();
+            p2.Marker = "O";
 
-            Console.WriteLine($"Greetings {player1.Name} and {player2.Name}. " +
+            Console.WriteLine($"Greetings {p1.Name} and {p2.Name}. " +
                 $"Would you like to play a game?");
 
             Game game = new Game(p1, p2);

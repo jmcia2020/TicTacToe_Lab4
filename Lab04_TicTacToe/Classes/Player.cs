@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
@@ -8,8 +6,6 @@ namespace Lab04_TicTacToe.Classes
     {
         public string Name { get; set; }
         /// <summary>
-        P1.Marker = "X";
-        P2.Marker = "O";
 
         /// </summary>
         public string Marker { get; set; }
